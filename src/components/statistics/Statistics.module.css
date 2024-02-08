@@ -1,0 +1,28 @@
+.listWrapper {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.listItem {
+    flex: 1 0 calc(35% - 10px);
+    margin: 5px;
+    padding: 5px 20px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    box-shadow: 5px 5px 9px -1px rgba(0, 0, 0, 0.47);
+    -webkit-box-shadow: 5px, 5px, 9px, -1px rgba(0, 0, 0, 0.47);
+    -moz-box-shadow: 5px, 5px, 9px, -1px rgba(0, 0, 0, 0.47);
+    font-size: 25px;
+    font-weight: 700;
+    background-color: rgb(4, 17, 73);
+    transition: scale 500ms;
+    color: white;
+}
+
+.listItem:last-child {
+    background-color: #0459f6;
+    color: black;
+    border-color: transparent;
+}
