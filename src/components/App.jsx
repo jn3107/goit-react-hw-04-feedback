@@ -1,9 +1,9 @@
-import css from "./App.module.css";
-import { FeedbackOptions } from "./feedbackOptions/FeedbackOptions";
-import { Statistics } from "./statistics/Statistics";
-import { SectionTitle } from "./sectionTitle/SectionTitle";
-import { NotificationMessage } from "./notificationMessage/NotificationMessage";
-import { useState } from "react";
+import css from './App.module.css';
+import { FeedbackOptions } from './feedbackOptions/FeedbackOptions';
+import { Statistics } from './statistics/Statistics';
+import { SectionTitle } from './sectionTitle/SectionTitle';
+import { NotificationMessage } from './notificationMessage/NotificationMessage';
+import { useState } from 'react';
 
 export const App = () => {
   const [good, setGood] = useState(0);
@@ -16,18 +16,18 @@ export const App = () => {
 
   const countPositiveFeedbackPercentage = () => {
     const total = countTotalFeedback();
-    return total ? Math.round((this.state.good / total) * 100) : 0;
+    return total ? Math.round((good / total) * 100) : 0;
   };
 
   const onBtnClick = option => {
     switch (option) {
-      case "good":
+      case 'good':
         setGood(prevGood => prevGood + 1);
         break;
-      case "neutral":
+      case 'neutral':
         setNeutral(prevNeutral => prevNeutral + 1);
         break;
-      case "bad":
+      case 'bad':
         setBad(prevBad => prevBad + 1);
         break;
       default:
@@ -36,12 +36,12 @@ export const App = () => {
   };
 
   const total = countTotalFeedback();
-  
+
   return (
     <div className={css.container}>
       <SectionTitle title="Please leave feedback">
         <FeedbackOptions
-          options={["good", "neutral", "bad"]}
+          options={['good', 'neutral', 'bad']}
           onLeaveFeedback={onBtnClick}
         />
       </SectionTitle>
